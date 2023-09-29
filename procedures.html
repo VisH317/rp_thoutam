@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <title>Research Site</title>
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+            crossorigin="anonymous"
+        >
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+        >
+        <link rel="stylesheet" href="stylesSE.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
+
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand logo overflow-hidden logo-container">
+                    <img src="images/logo.png" alt="logo" class="d-inline-block w-100 h-100 logo" width="64px" height="64px">
+                </a>
+            </div>
+            <!-- hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" onclick="toggle()"> <!-- Button to toggle navbar on small screens, couldn't get bootstrap to work so I wrote my own script to toggle a vertical display on small screens (see below) -->
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <!-- collapsible navbar menu with custom hover underline css -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nb-menu-item">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="procedures.html" class="nav-link hover-underline-animation nb-menu-item">Procedure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nb-menu-item">Random</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Procedure Table-->
+        <section class="procedure p-2">
+            <div class="container">
+                <br>
+                <!--Procedure Title-->
+                <div class="text-center">
+                    <h1 class="font-weight-bold">Procedure</h1>
+                    <h2 style="color: #64748b; font-weight: light; font-size: 26px;">Engineering procedure for research project</h2>
+                </div>
+                <br><br>
+                <!--Main Procedure Table-->
+                <table class="table table-hover table-bordered border-dark" style="border-color: black">
+                    <thead class="thead-dark"> <!--Headers-->
+                        <tr>
+                            <th class="text-center"><h3>Step</h3></th>
+                            <th class="text-center"><h3>Method</h3></th>
+                            <th class="text-center"><h3>Photo</h3></th>
+                        </tr>
+                    </thead>
+                    <!--Procedure list-->
+                    <tbody>
+                        <tr>
+                            <th scope="col" class="text-center"><h2>Step 1</h2></th>
+                            <td class="text-center">
+                                <p class="how-to">Create Feature Extractor Model using ResNet and cGAN</p>
+                                <ul class="text-left">
+                                    <li>The feature extractor requires a text processor model that maps to an image embedding</li>
+                                    <li>A Generative Adversarial Network was trained to convert a text embedding space into an image embedding space</li>
+                                    <li>The text processor is combined with a ResNet to make a siamese architecture to compare embeddings</li>
+                                </ul>
+                            </td>
+                            <td class="text-center p-4"><img src="images/method1.png" alt="bruh"></td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="text-center"><h2>Step 2</h2></th>
+                            <td class="text-center">
+                                <div class="w-100 h-100  d-flex flex-column justify-content-center h-100">
+                                <p class="how-to">Create the AI2THOR Environment wrapper & Setup the PPO Model</p>
+                                <ul class="text-left">
+                                    <li>The AI2THOR environment wrapper was created using OpenAI Gym</li>
+                                    <li>Create an environment reset and step function</li>
+                                    <li>Stable_baselines3 is used to create a PPO model that connects the feature extractor to predict on the environment</li>
+                                </ul>
+                            </div>
+                            </td>
+                            <td class="text-center p-4"><img src="images/method2.png" alt="bruh" width="350" ></td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="text-center"><h2>Step 3</h2></th>
+                            <td class="text-center">
+                                <p class="how-to">Train the cGAN and overall PPO model</p>
+                                <ul class="text-left">
+                                    <li>3 trials of training sessions were done with different typerparameters</li>
+                                    <li>First trial used negative rewards, removed in the second trial</li>
+                                    <li>Third trial used LSTM memory</li>
+                                </ul>
+                            </td>
+                            <td class="text-center p-4"><img src="images/method3.png" alt="bruh" width="350" ></td>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="text-center"><h2>Step 4</h2></th>
+                            <td class="text-center">
+                                <p class="how-to">Evaluate Model on Environment</p>
+                                <ul class="text-left">
+                                    <li>Use separate environment rooms to evaluate the overall efficacy of the algorithm</li>
+                                    <li>Reward measure are used to evaluate algorithm efficacy</li>
+                                </ul>
+                            </td>
+                            <td class="text-center p-4"><img src="images/method4.png" alt="bruh" width="350" ></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <p class="lead">Copyright &copy; SE 2023 Bootstrap Demo</p>
+                <!--Back to top link-->
+                <a href="#" class="position-relative bottom-0 end-0 p-5">
+                    <i class="b1 b1-arrow-up-circle h2 icon-white" style="color: #cbd5e1">Back to Top</i>
+                </a>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        let open = false
+
+        function toggle() {
+            let d = document.getElementById("navmenu").style.display // get display value of element
+            document.getElementById("navmenu").style.display = d === "none" ? "block" : "none" // toggle the display to be block if invisible (open), or none otherwise (close)
+        }
+    </script>
+</html>

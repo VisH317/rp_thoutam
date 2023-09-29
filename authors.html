@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <title>Research Site</title>
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+            crossorigin="anonymous"
+        >
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+        >
+        <link rel="stylesheet" href="stylesSE.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand logo overflow-hidden logo-container">
+                    <img src="images/logo.png" alt="logo" class="d-inline-block w-100 h-100 logo" width="64px" height="64px">
+                </a>
+            </div>
+            <!-- hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" onclick="toggle()">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <!-- collapsible navbar menu with custom hover underline css -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nb-menu-item">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="procedures.html" class="nav-link hover-underline-animation nb-menu-item">Procedure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nb-menu-item">Random</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="authors">
+            <div class="container">
+                <br>
+                <h1 class="text-center about-team">About the Team</h1>
+                <br><br>
+            </div>
+            <div class="row row-cols-md-2 g-4 p-8">
+                <!--Card for main researcher-->
+                <div class="col d-flex flex-column align-items-center">
+                    <div class="card about p-4 w-75">
+                        <img src="images/me.png" alt="man man man man" class="card-img-top " style="border-radius: 50%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Vishrut Thoutam</h4>
+                            <h5>Class: Software Engineering</h5>
+                            <p class="card-text">Vishrut Thoutam is a brilliant and accomplished researcher who has made significant contributions to the field of artificial intelligence (AI). With a profound passion for AI, Vishrut has established himself as a leading figure in the intersection of technology and innovation. His work showcases not only his exceptional intellect but also his unwavering commitment to advancing the boundaries of AI research.                            </p>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <!-- <div class="card about p-4 w-75">
+                        <img src="images/woman1.jpg" alt="man man man man" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">TITULO</h4>
+                            <h5>Class: BME</h5>
+                            <p class="card-text">Description YEAAAAAA</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="card about p-4 w-75">
+                        <img src="images/woman2.jpg" alt="man man man man" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title">TITULO</h4>
+                            <h5>Class: BME</h5>
+                            <p class="card-text">Description YEAAAAAA</p>
+                        </div>
+                    </div>     -->
+                </div> 
+            </div>
+        </section>
+
+        <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <p class="lead">Copyright &copy; SE 2023 Bootstrap Demo</p>
+                <!--Back to top link-->
+                <a href="#" class="position-relative bottom-0 end-0 p-5">
+                    <i class="b1 b1-arrow-up-circle h2 icon-white" style="color: #cbd5e1">Back to Top</i>
+                </a>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        let open = false
+
+        function toggle() {
+            let d = document.getElementById("navmenu").style.display // get display value of element
+            document.getElementById("navmenu").style.display = d === "none" ? "block" : "none" // toggle the display to be block if invisible (open), or none otherwise (close)
+        }
+    </script>
+</html>

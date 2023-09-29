@@ -1,0 +1,77 @@
+/* -----------------Underline Animation CSS -----------------*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    /*color: #0087ca;*/
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}
+
+.about-team {
+    font-size: 40px;
+}
+
+.how-to {
+    font-size: 20px;
+}
+
+.authors, .procedure {
+    background-color: #dbe3e7
+}
+
+.nb-background-color { /* navbar background color */
+    background-color: #1e293b;
+}
+
+.overview {
+    background-color: #dbe3e7
+}
+
+/* td {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+} */
+
+.ov-pad-left {
+    padding-left: 20px;
+}
+
+.logo-container {
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.logo {
+    background-size: cover;
+}
+
+.nb-menu-item {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #334155;
+}
+

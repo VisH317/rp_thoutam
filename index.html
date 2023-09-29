@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <title>Research Site</title>
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+            crossorigin="anonymous"
+        >
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+        >
+        <link rel="stylesheet" href="stylesSE.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
+
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand logo overflow-hidden logo-container">
+                    <img src="images/logo.png" alt="logo" class="d-inline-block w-100 h-100 logo" width="64px" height="64px">
+                </a>
+            </div>
+            <!-- hamburger menu button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" onclick="toggle()">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <!-- collapsible navbar menu with custom hover underline css -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nb-menu-item">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="procedures.html" class="nav-link hover-underline-animation nb-menu-item">Procedure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="authors.html" class="nav-link hover-underline-animation nb-menu-item">Random</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Landing Section-->
+        <section class="showcase text-light p-4 text-center">
+            <div class="container">
+                <div class="d-flex flex-row w-100 mx-auto">
+                    <div class="p-2 d-flex align-items-center">
+                        <img class="img-fluid" src="images/main.png" alt="profile pic" width="1200" style="border-radius: 10px;">
+                    </div>
+                    <div class="p-2 d-flex align-items-center text-center">
+                        <h1 class="display-4 text-dark p-4">Target-Driven Visual Navigation To Find Objects Based on Descriptions</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Background section-->
+        <section class="overview text-dark p-8 text-left">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-sm-6 p-0 d-flex align-items-center justify-content-center">
+                        <img class="img-fluid" src="images/background.png" alt="profile pic" width="400">
+                    </div>
+                    <div class="col-sm-6 p-3">
+                        <h1 class="ov-pad-left">Background</h1>
+                        <p class="overview lead overview-font">Image-based AI navigation has become a very important concept for the future. It is what powers self driving car control loops, and a lot of the new navigation topics in robotics. However, many of these algorithms are unable to generalize to human text input. Using human text input, robots can navigate more efficiently using text commands instead of basic navigation, allowing for a better experience with self driving cars and other autonomous devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Methods section-->
+        <section class="overview text-dark p-2 text-left">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-sm-6 p-3">
+                        <h1 class="ov-pad-left">Methods</h1>
+                        <p class="overview lead overview-font">In this research study, an algorithm was created to take image and text input to navigate within a scene accordingly. 3 dimensional scenes from the AI2THOR scene library were used, and reward/environment metrics were decided to determine the training of the algorithm. A feature extractor was created to take the current image the robot sees and a text input to embed certain locations. The embedding is then passed onto a PPO policy gradient algorithm to generate the proper action. This was trained through multiple episodes and tested with loss measurements at each point</p>
+                    </div>
+                    <div class="col-sm-6 p-0 d-flex align-items-center text-center justify-content-center">
+                        <img class="img-fluid" src="images/method1.png" alt="profile pic" width="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Results section-->
+        <section class="overview text-dark p-2 text-left">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-sm-6 p-0 d-flex align-items-center justify-content-center">
+                        <img class="img-fluid" src="images/results.png" alt="profile pic" width="400">
+                    </div>
+                    <div class="col-sm-6 p-3">
+                        <h1 class="ov-pad-left">Results</h1>
+                        <p class="overview lead overview-font">After training and testing the algorithm, results showed initial generalization to find different objects based on text commands. However, more training was required to get a more effective algorithm. Since proper resources to train the algorithm were not present, the robot's control system did not work as well as anticipated.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <p class="lead">Copyright &copy; SE 2023 Bootstrap Demo</p>
+                <!--Back to top link-->
+                <a href="#" class="position-relative bottom-0 end-0 p-5">
+                    <i class="b1 b1-arrow-up-circle h2 icon-white" style="color: #cbd5e1">Back to Top</i>
+                </a>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        let open = false
+
+        function toggle() {
+            let d = document.getElementById("navmenu").style.display // get display value of element
+            document.getElementById("navmenu").style.display = d === "none" ? "block" : "none" // toggle the display to be block if invisible (open), or none otherwise (close)
+        }
+    </script>
+</html>
